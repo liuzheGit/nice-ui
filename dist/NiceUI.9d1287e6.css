@@ -175,3 +175,17 @@ a {
     .btn.red.outline:hover {
       background: #f96868;
       color: #fff; }
+
+.btn i.icon {
+  display: inline-block;
+  width: .9rem; }
+  .btn i.icon.right {
+    padding-left: .5rem; }
+  .btn i.icon.left {
+    padding-right: .3rem; }
+
+.btn.large i.icon.right {
+  padding-left: .7rem; }
+
+.btn.large i.icon.left {
+  padding-right: 1.3rem; }
