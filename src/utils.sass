@@ -1,0 +1,81 @@
+// 添加颜色辅助
+$colors: $dark, $light, $gray, $blue, $deep-blue, $red, $yellow, $green
+$names: 'dark', 'light', 'gray', 'blue', 'deep-blue', 'red', 'yellow', 'green'
+
+@for $i from 1 through length($colors)
+  .text-#{nth($names, $i)}
+    color: nth($colors, $i)
+
+  .bg-#{nth($names, $i)}
+    background: nth($colors, $i)
+
+// 清楚浮动
+=clearfix
+  &::after
+    content: ''
+    display: table
+    clear: both
+
+.clearfix
+  +clearfix
+
+%message-shared
+  border: 1px solid #ccc
+  padding: 10px
+  color: #333
+
+.message
+  @extend %message-shared
+
+.success
+  @extend %message-shared
+  border-color: green
+
+//文字对齐, 字体大小, 超出省略
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+.f8
+  font-size: .8rem
+.f9
+  font-size: .9rem
+.f1
+  font-size: 1rem
+.f12
+  font-size: 1.2rem
+.f14
+  font-size: 1.4rem
+
+.text-ellipsis
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+// 区块间隔
+
+.p1rem
+  padding: 1rem
+.m1rem
+  margin: 1rem
+
+.p51rem
+  padding: .5rem 1rem
+
+.m51rem
+  margin: .5rem 1rem
+
+// 居中  1.absolute 2.flex
+
+.ab-center
+  position: absolute
+  left: 50%
+  right: 50%
+  transform: translate(-50%, -50%)
+
+.fx-center
+  display: flex
+  justify-content: center
+  align-items: center
